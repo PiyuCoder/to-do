@@ -15,7 +15,7 @@ const __dirname = dirname(__filename);
 
 app.use(express.json());
 app.use(cors());
-app.use("/", express.static("/build"));
+app.use("/", express.static("build"));
 
 const PORT = process.env.PORT;
 
