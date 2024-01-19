@@ -89,6 +89,7 @@ export default function Tasks({
               categori={category}
             />
             <textarea
+              className="taskname"
               autoFocus={true}
               defaultValue={taskName}
               onChange={(e) => setTaskName(e.target.value)}
