@@ -36,7 +36,7 @@ export default function AuthProvider({ children }) {
     };
 
     fetch();
-  }, [setData, token, flag]);
+  }, [setData, token, flag, isLoading]);
   return (
     <AuthContext.Provider
       value={{

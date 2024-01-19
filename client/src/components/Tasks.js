@@ -96,7 +96,7 @@ export default function Tasks({
           </div>
         )}
         <div className="time-container flex">
-          <p>{timeFormatter(time)}</p>
+          <p>{isEditing ? "Click done to save" : timeFormatter(time)}</p>
         </div>
         {isEditing ? (
           ""

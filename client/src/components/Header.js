@@ -4,21 +4,8 @@ import "../styles/header.css";
 import { AuthContext } from "../context/userContext";
 
 const Header = () => {
-  const { userInfo, user, setIsLoading, setUser } = useContext(AuthContext);
-  const [token, setToken] = useState("");
-
-  useEffect(() => {
-    const fetchToken = async () => {
-      const jwt = await localStorage.getItem("token");
-      if (jwt) {
-        setToken(jwt);
-      } else {
-        setToken("");
-      }
-    };
-
-    fetchToken();
-  }, [userInfo, setToken]); // Added token as a dependency
+  const { userInfo, user, setIsLoading, setUser, token } =
+    useContext(AuthContext);
 
   const logoutHandler = () => {
     if (token) {
